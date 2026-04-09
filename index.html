@@ -442,7 +442,8 @@
 
       // Fetch semua data dari cycle_count_log, urutkan dari terbaru
       const { data, error } = await supabase
-        .from(TBL_LOG)
+        .from(TBL_LOG2
+             )
         .select('*')
         .order('timestamps', { ascending: false })
         .limit(1000); // Batasi 1000 record agar tidak berat
