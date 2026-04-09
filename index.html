@@ -304,12 +304,12 @@
       partnumber: currentData.partnumber,
       partdescription: currentData.partdescription,
       qty: Number(qty),
-      operator: "Counter1"
+      operator: "Counter2"
     };
 
     try {
       const { data, error } = await supabase
-        .from(TBL_LOG)
+        .from(TBL_LOG2)
         .insert([record])
         .select();
 
